@@ -6,26 +6,36 @@ var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x
 });
 OpenStreetMap_Mapnik.addTo(map);
 
-//Hack for Geolocation in Firefox
-// https://github.com/Leaflet/Leaflet/issues/1070
-var isFirefox = typeof InstallTrigger !== 'undefined';
-var loadedLocation = false;
-
-if( isFirefox ){
-  navigator.geolocation.getCurrentPosition(firefox_success, firefox_error);
-  setTimeout(function(){
-    if( !loadedLocation ){
-      use_geoip_plugin();
-    }
-  }, 3000);
+//Check if the lat and lng parameters are set:
+params = location.search.substring(1);
+if( params.length > 0 && params.indexOf("lat") > -1 ){
+  marker_from_url(params);
 } else {
-  // Center on current location
-  map.locate({setView: true});
+  center_map_on_location();
+}
 
-  //If we can't find our current location, try the plugin:
-  map.on('locationerror', function(){
-    use_geoip_plugin();
-  });
+function center_map_on_location(){
+  //Hack for Geolocation in Firefox
+  // https://github.com/Leaflet/Leaflet/issues/1070
+  var isFirefox = typeof InstallTrigger !== 'undefined';
+  var loadedLocation = false;
+
+  if( isFirefox ){
+    navigator.geolocation.getCurrentPosition(firefox_success, firefox_error);
+    setTimeout(function(){
+      if( !loadedLocation ){
+        use_geoip_plugin();
+      }
+    }, 3000);
+  } else {
+    // Center on current location
+    map.locate({setView: true});
+
+    //If we can't find our current location, try the plugin:
+    map.on('locationerror', function(){
+      use_geoip_plugin();
+    });
+  }
 }
 
 function firefox_success(position){
@@ -49,8 +59,35 @@ function use_geoip_plugin(){
 marker = L.marker([0,0], {draggable: true});
 map.on('click', function(e){
   marker.setLatLng(e.latlng).addTo(map);
-  marker.bindPopup("" + e.latlng).openPopup();
+  html = map_sharing_link(e.latlng);
+  marker.bindPopup(html).openPopup();
 });
+
+function map_sharing_link(latlng){
+  var re = /LatLng\((-?[0-9\.]+),\s(-?[0-9\.]+)\)/;
+  var coords = re.exec(latlng);
+  var lat = coords[1];
+  var long = coords[2];
+  var page_url =  window.location.protocol + "//" + window.location.host + "/";
+  var link = page_url + "?lat=" + lat + "&lng=" + long;
+  var html = "<a href=" + link + ">URL para compartir</a>";
+  return html;
+}
+
+function marker_from_url(params){
+  var myIcon = L.icon({
+    iconUrl: '/js/images/marker-icon-green.png',
+    iconRetinaUrl: '/js/images/marker-icon-2x-green.png',
+    iconSize: [25, 41],
+    iconAnchor: [25, 41],
+    popupAnchor: [-3, -76],
+    shadowUrl: 'images/marker-shadow.png',
+  });
+  lat = /lat=(-?[0-9\.]+)/.exec(params)[1];
+  long = /lng=(-?[0-9\.]+)/.exec(params)[1];
+  map.setView([lat,long], 15);
+  marker = L.marker([lat, long], {icon: myIcon}).addTo(map);
+}
 
 marker.on('click', function(){
   map.removeLayer(marker);
