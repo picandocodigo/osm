@@ -179,7 +179,7 @@ L.Control.GeoSearch = L.Control.extend({
     if (this.options.showMarker == true) {
       var myIcon = L.icon({
         iconUrl: 'images/marker-icon-green.png',
-        iconRetinaUrl: 'marker-icon-2x-green.png',
+        iconRetinaUrl: 'images/marker-icon-2x-green.png',
         iconSize: [25, 41],
         iconAnchor: [25, 41],
         popupAnchor: [-3, -76],
