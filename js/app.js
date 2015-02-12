@@ -68,7 +68,7 @@ function map_sharing_link(latlng){
   var coords = re.exec(latlng);
   var lat = coords[1];
   var long = coords[2];
-  var page_url =  window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+  var page_url =  window.location.protocol + "//" + window.location.host + window.location.pathname;
   var link = page_url + "?lat=" + lat + "&lng=" + long;
   var html = "<a href=" + link + ">URL para compartir</a>";
   return html;
@@ -76,12 +76,12 @@ function map_sharing_link(latlng){
 
 function marker_from_url(params){
   var myIcon = L.icon({
-    iconUrl: './images/marker-icon-green.png',
-    iconRetinaUrl: './images/marker-icon-2x-green.png',
+    iconUrl: './js/images/marker-icon-green.png',
+    iconRetinaUrl: './js/images/marker-icon-2x-green.png',
     iconSize: [25, 41],
     iconAnchor: [25, 41],
     popupAnchor: [-3, -76],
-    shadowUrl: './images/marker-shadow.png',
+    shadowUrl: './js/images/marker-shadow.png',
   });
   lat = /lat=(-?[0-9\.]+)/.exec(params)[1];
   long = /lng=(-?[0-9\.]+)/.exec(params)[1];
