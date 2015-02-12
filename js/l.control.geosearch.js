@@ -178,12 +178,12 @@ L.Control.GeoSearch = L.Control.extend({
   _showLocation: function (location) {
     if (this.options.showMarker == true) {
       var myIcon = L.icon({
-        iconUrl: 'images/marker-icon-green.png',
-        iconRetinaUrl: 'images/marker-icon-2x-green.png',
+        iconUrl: './js/images/marker-icon-green.png',
+        iconRetinaUrl: './js/images/marker-icon-2x-green.png',
         iconSize: [25, 41],
         iconAnchor: [25, 41],
         popupAnchor: [-3, -76],
-        shadowUrl: 'images/marker-shadow.png',
+        shadowUrl: './js/images/marker-shadow.png',
       });
       if (typeof this._positionMarker === 'undefined')
         this._positionMarker = L.marker([location.Y, location.X], {icon: myIcon}).addTo(this._map);
