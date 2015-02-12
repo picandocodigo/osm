@@ -1,5 +1,5 @@
 var pos = L.GeoIP.getPosition();
-var map = L.map('map').setView([0,0], 15);
+var map = L.map('map');
 
 // Add OSM layer
 var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -7,8 +7,13 @@ var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x
 });
 OpenStreetMap_Mapnik.addTo(map);
 
-// Center on our current location
-L.GeoIP.centerMapOnPosition(map);
+// Center on current location
+map.locate({setView: true});
+
+//If we couldn't find our current location, try the plugin:
+map.on('locationerror', function(){
+  L.GeoIP.centerMapOnPosition(map);
+});
 
 // Add/remove marker on click
 marker = L.marker([0,0], {draggable: true});
