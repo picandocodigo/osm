@@ -14,11 +14,11 @@ if( params.length > 0 && params.indexOf("lat") > -1 ){
   center_map_on_location();
 }
 
+var loadedLocation = false;
 function center_map_on_location(){
   //Hack for Geolocation in Firefox
   // https://github.com/Leaflet/Leaflet/issues/1070
   var isFirefox = typeof InstallTrigger !== 'undefined';
-  var loadedLocation = false;
 
   if( isFirefox ){
     navigator.geolocation.getCurrentPosition(firefox_success, firefox_error);
@@ -99,3 +99,16 @@ new L.Control.GeoSearch({
     position: 'topcenter',
     showMarker: true
 }).addTo(map);
+
+// Add me to map
+var fernando = L.icon({
+  iconUrl: './js/images/fernando.png',
+  iconRetinaUrl: './js/images/marker-icon-2x-green.png',
+  iconSize: [22, 32],
+  iconAnchor: [22, 32],
+  popupAnchor: [-16, -38],
+  shadowUrl: './js/images/marker-shadow.png',
+});
+var options =  {icon: fernando, title: "Fernando"};
+var me = L.marker([-34.90209, -56.17731], options).addTo(map);
+me.bindPopup("Tomando una Stout");
