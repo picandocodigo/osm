@@ -1,0 +1,63 @@
+[
+  {
+    "name" : "Asunción",
+    "lat"  : "-25.2822",
+    "lng"  : "-57.6351",
+    "type" : "visit"
+  },
+  {
+    "name": "Buenos Aires",
+    "lat" : "-34.6033",
+    "lng" : "-58.3817",
+    "type": "visit"
+  },
+  {
+    "name" : "Dublin",
+    "lat"  : "53.3478",
+    "lng" :  "-6.2597",
+    "type" : "visit"
+  },
+  {
+    "name" : "Edinburgh",
+    "lat"  : "55.9531",
+    "lng"  : "-3.1889",
+    "type" : "live"
+  },
+  {
+    "name" : "London",
+    "lat"  : "51.5072",
+    "lng"  : "0.1275",
+    "type" : "visit"
+  },
+  {
+    "name" : "Madrid",
+    "lat"  : "40.4000",
+    "lng"  : "-3.6833",
+    "type" : "visit"
+  },
+  {
+    "name" : "New York",
+    "lat"  : "40.7127",
+    "lng"  : "-74.0059",
+    "type" : "visit"
+  },
+  {
+    "name" : "Palma de Mallorca",
+    "lat"  : "39.5667",
+    "lng"  : "2.6500",
+    "type" : "visit"
+  },
+  {
+    "name" : "Porto Alegre",
+    "lat"  : "-30.0331",
+    "lng"  : "-51.2300",
+    "type" : "visit"
+  },
+  {
+    "name" : "San Francisco",
+    "lat"  : "37.7833",
+    "lng"  : "-122.4167",
+    "type" : "visit"
+  }
+]
+
