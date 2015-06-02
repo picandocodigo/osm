@@ -4,7 +4,7 @@ var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 OpenStreetMap_Mapnik.addTo(map);
-map.setView([0,0], 3);
+map.setView([0,0], 2);
 
 function loadJSON(path){
   var obj = new XMLHttpRequest();

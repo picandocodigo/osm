@@ -42,6 +42,12 @@
     "type" : "visit"
   },
   {
+    "name" : "Ottawa",
+    "lat"  : "45.4214",
+    "lng"  : "-75.6919",
+    "type" : "visit"
+  },
+  {
     "name" : "Palma de Mallorca",
     "lat"  : "39.5667",
     "lng"  : "2.6500",
