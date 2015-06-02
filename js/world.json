@@ -24,6 +24,12 @@
     "type" : "live"
   },
   {
+    "name" : "Glasgow",
+    "lat"  : "55.8580",
+    "lng"  : "-4.2590",
+    "type" : "visit"
+  },
+  {
     "name" : "London",
     "lat"  : "51.5072",
     "lng"  : "0.1275",
