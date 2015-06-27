@@ -24,12 +24,10 @@ function loadJSON(path){
 }
 
 function load_locations(data){
-  console.log(data);
   data.forEach( function(city){
     var marker = L.marker([city.lat, city.lng]).addTo(map);
     var html = "<strong>" + city.name + "</strong>";
     marker.bindPopup(html);
-    console.log(city.name);
   });
 }
 
