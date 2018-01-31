@@ -1,5 +1,13 @@
-var map = L.map('map');
+const provider = new window.GeoSearch.OpenStreetMapProvider()
 
+const searchControl = new window.GeoSearch.GeoSearchControl({
+  provider: provider,
+  style: 'bar',
+  retainZoomLevel: true
+})
+
+var map = L.map('map');
+map.addControl(searchControl);
 // Add OSM layer
 var OpenStreetMap_Mapnik = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="//www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -7,7 +15,7 @@ var OpenStreetMap_Mapnik = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}
 OpenStreetMap_Mapnik.addTo(map);
 
 //Check if the lat and lng parameters are set:
-params = location.search.substring(1);
+var params = location.search.substring(1);
 if( params.length > 0 && params.indexOf("lat") > -1 ){
   marker_from_url(params);
 } else {
@@ -56,7 +64,7 @@ function use_geoip_plugin(){
 }
 
 // Add/remove marker on click
-marker = L.marker([0,0], {draggable: true});
+var marker = L.marker([0,0], {draggable: true});
 map.on('click', function(e){
   marker.setLatLng(e.latlng).addTo(map);
   html = map_sharing_link(e.latlng);
@@ -92,13 +100,6 @@ function marker_from_url(params){
 marker.on('click', function(){
   map.removeLayer(marker);
 });
-
-// Add address search
-new L.Control.GeoSearch({
-    provider: new L.GeoSearch.Provider.OpenStreetMap(),
-    position: 'topcenter',
-    showMarker: true
-}).addTo(map);
 
 // Add me to map
 var fernando = L.icon({
