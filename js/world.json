@@ -82,6 +82,23 @@
     "lat"  : "37.7833",
     "lng"  : "-122.4167",
     "type" : "visit"
+  },
+  {
+    "name" : "Budapest",
+    "lat"  : "47.49801",
+    "lng"  : "19.03991",
+    "type" : "visit"
+  },
+  {
+    "name" : "Prague",
+    "lat"  : "50.08861",
+    "lng"  : "14.42139",
+    "type" : "visit"
+  },
+  {
+    "name" : "Berlin",
+    "lat"  : "52.504043",
+    "lng"  : "13.393236",
+    "type" : "visit"
   }
 ]
-
