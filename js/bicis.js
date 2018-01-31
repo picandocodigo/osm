@@ -1,8 +1,8 @@
 var map = L.map('map');
 
 
-var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+var OpenStreetMap_Mapnik = L.tileLayer('//{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="//www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 OpenStreetMap_Mapnik.addTo(map);
 

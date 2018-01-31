@@ -1,8 +1,8 @@
 var map = L.map('map');
 
 // Add OSM layer
-var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+var OpenStreetMap_Mapnik = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="//www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 OpenStreetMap_Mapnik.addTo(map);
 
