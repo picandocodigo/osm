@@ -67,7 +67,7 @@ function use_geoip_plugin(){
 var marker = L.marker([0,0], {draggable: true});
 map.on('click', function(e){
   marker.setLatLng(e.latlng).addTo(map);
-  html = map_sharing_link(e.latlng);
+  var html = map_sharing_link(e.latlng);
   marker.bindPopup(html).openPopup();
 });
 
