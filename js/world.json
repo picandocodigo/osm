@@ -1,5 +1,11 @@
 [
   {
+    "name" : "Maldonado",
+    "lat" : "-34.9019",
+    "lng" : "-54.9634",
+    "type" : "visit"
+  },
+  {
     "name" : "Asunción",
     "lat"  : "-25.2822",
     "lng"  : "-57.6351",
@@ -22,12 +28,6 @@
     "lat"  : "55.9531",
     "lng"  : "-3.1889",
     "type" : "live"
-  },
-  {
-    "name" : "Glasgow",
-    "lat"  : "55.8580",
-    "lng"  : "-4.2590",
-    "type" : "visit"
   },
   {
     "name" : "London",
@@ -66,12 +66,6 @@
     "type" : "visit"
   },
   {
-    "name" : "Perth",
-    "lat"  : "56.3970",
-    "lng"  : "-3.4370",
-    "type" : "visit"
-  },
-  {
     "name" : "Porto Alegre",
     "lat"  : "-30.0331",
     "lng"  : "-51.2300",
@@ -99,6 +93,42 @@
     "name" : "Berlin",
     "lat"  : "52.504043",
     "lng"  : "13.393236",
+    "type" : "visit"
+  },
+  {
+    "name" : "Swansea",
+    "lat"  : "51.6214",
+    "lng"  : "-3.9436",
+    "type" : "visit"
+  },
+  {
+    "name" : "Amsterdam",
+    "lat" : "52.3676",
+    "lng" : "4.9041",
+    "type" : "visit"
+  },
+  {
+    "name" : "Munich",
+    "lat" : "48.1351",
+    "lng" : "11.5820",
+    "type" : "visit"
+  },
+  {
+    "name" : "Nuremberg",
+    "lat" : "49.4521",
+    "lng" : "11.0767",
+    "type" : "visit"
+  },
+  {
+    "name" : "Bremen",
+    "lat" : "53.0793",
+    "lng" : "8.8017",
+    "type" : "visit"
+  },
+  {
+    "name" : "Warsaw",
+    "lat" : "52.2297",
+    "lng" : "21.0122",
     "type" : "visit"
   }
 ]
