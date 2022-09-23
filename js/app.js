@@ -111,5 +111,5 @@ var fernando = L.icon({
   shadowUrl: './js/images/marker-shadow.png',
 });
 var options =  {icon: fernando, title: "Fernando"};
-var me = L.marker([-34.90209, -56.17731], options).addTo(map);
+var me = L.marker([55.943468, -3.180306], options).addTo(map);
 me.bindPopup("Tomando una Stout");
