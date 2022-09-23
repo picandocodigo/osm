@@ -91,8 +91,8 @@ function marker_from_url(params){
     popupAnchor: [-3, -76],
     shadowUrl: './js/images/marker-shadow.png',
   });
-  lat = /lat=(-?[0-9\.]+)/.exec(params)[1];
-  long = /lng=(-?[0-9\.]+)/.exec(params)[1];
+  var lat = /lat=(-?[0-9\.]+)/.exec(params)[1];
+  var long = /lng=(-?[0-9\.]+)/.exec(params)[1];
   map.setView([lat,long], 15);
   marker = L.marker([lat, long], {icon: myIcon}).addTo(map);
 }
