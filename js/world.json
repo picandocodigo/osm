@@ -136,5 +136,17 @@
     "lat"  : "51.8985",
     "lng" :  "-8.4756",
     "type" : "visit"
+  },
+  {
+    "name" : "Vilnius",
+    "lat"  : "54.6872",
+    "lng" :  "25.2797",
+    "type" : "visit"
+  },
+  {
+    "name" : "Trakai",
+    "lat"  : "54.6376",
+    "lng" :  "24.9341",
+    "type" : "visit"
   }
 ]
