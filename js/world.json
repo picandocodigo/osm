@@ -138,6 +138,12 @@
     "type" : "visit"
   },
   {
+    "name" : "Kaunas",
+    "lat"  : "54.8985",
+    "lng" :  "23.9036",
+    "type" : "visit"
+  },
+  {
     "name" : "Vilnius",
     "lat"  : "54.6872",
     "lng" :  "25.2797",
