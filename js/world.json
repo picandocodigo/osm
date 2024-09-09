@@ -154,5 +154,23 @@
     "lat"  : "54.6376",
     "lng" :  "24.9341",
     "type" : "visit"
+  },
+  {
+    "name": "Aarhus",
+    "lat" : "56.149422",
+    "lng" : "10.212736",
+    "type": "visit"
+  },
+  {
+    "name": "Copenhagen",
+    "lat": "55.683779",
+    "lng": "12.571449",
+    "type": "visit"
+  },
+  {
+    "name": "Gothenburg",
+    "lat": "57.70832",
+    "lng": "11.968",
+    "type": "gig"
   }
 ]

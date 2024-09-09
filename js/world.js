@@ -1,4 +1,4 @@
-var map = L.map('map', {worldCopyJump: true});
+var map = L.map('map', { worldCopyJump: true });
 // Add OSM layer
 var OpenStreetMap_Mapnik = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="//www.openstreetmap.org/copyright">OpenStreetMap</a>'
