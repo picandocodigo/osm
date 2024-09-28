@@ -78,7 +78,9 @@ function map_sharing_link(latlng){
   var long = coords[2];
   var page_url =  window.location.protocol + "//" + window.location.host + window.location.pathname;
   var link = page_url + "?lat=" + lat + "&lng=" + long;
-  var html = "<a href=" + link + ">URL para compartir</a>";
+  var html = "<h4><a href=" + link + ">URL para compartir</a></h4>";
+  html += "<strong>Latitud</strong>: <br>" + lat + "<br>";
+  html += "<strong>Longitud</strong>: <br>" + long;
   return html;
 }
 
